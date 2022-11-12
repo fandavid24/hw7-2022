@@ -54,5 +54,13 @@ var output = document.getElementById("volume");
 output.innerHTML = slider.value;
 slider.oninput = function () {
 	video.volume = slider.value / 100;
-	output.innerHTML = slider.value;
+	output.innerHTML = slider.value + "%";
 }
+
+document.querySelector("#vintage").addEventListener("click", function () {
+	document.querySelector(".video").classList.add("oldSchool");
+});
+
+document.querySelector("#orig").addEventListener("click", function () {
+	document.querySelector(".video").classList.remove("oldSchool");
+});
